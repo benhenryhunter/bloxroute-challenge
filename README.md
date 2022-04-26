@@ -29,3 +29,6 @@ $ go get
 $ go run main.go [GetItems, GetItem, AddItem, DeleteItem]
 ```
 
+## Example Usage:
+
+![image](https://user-images.githubusercontent.com/8403969/165197596-f9369724-0b39-483f-9656-f4abc1593550.png)
