@@ -1,4 +1,4 @@
-# bloXRoute Challenge
+# bloXroute Challenge
 
 This is for the bloXroute Challenge to set up a go server subscribed to an SQS queue and a client that from the CLI can issue commands to the server.
 

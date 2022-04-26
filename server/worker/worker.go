@@ -46,8 +46,10 @@ func listen(out chan *sqs.Message) {
 				fmt.Println("No handler for specified action")
 				continue
 			}
-			f(clientRequest)
-			DeleteMessage(os.Getenv("QUEUE_NAME"), *message.ReceiptHandle)
+			go func(msg *sqs.Message) {
+				f(clientRequest)
+				DeleteMessage(os.Getenv("QUEUE_NAME"), *msg.ReceiptHandle)
+			}(message)
 		}
 	}
 }
